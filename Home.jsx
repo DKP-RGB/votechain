@@ -10,12 +10,7 @@ const stats = [
   { label: "Transparency", value: "100%", suffix: "Verifiable" },
 ];
 
-const features = [
-  { icon: "🧬", title: "Facial Recognition", desc: "AI-powered face scan verifies your identity before voting. Powered by face-api.js running entirely in your browser." },
-  { icon: "⛓️", title: "Blockchain Voting", desc: "Every vote is hashed with SHA-256 and stored on an immutable chain. Tamper-proof and permanently auditable." },
-  { icon: "🔐", title: "Zero Backend", desc: "Fully client-side architecture. Your data never leaves your device. Maximum privacy guaranteed." },
-  { icon: "📊", title: "Live Results", desc: "Real-time vote counting and verification. Chain integrity validated on every query." },
-];
+
 
 export default function Home() {
   return (
@@ -91,22 +86,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Features */}
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 24px" }}>
-        <h2 style={{ textAlign: "center", fontFamily: "'Inter',sans-serif", fontSize: 32, fontWeight: 800, color: "#111827", marginBottom: 12 }}>
-          Key Features of the Platform
-        </h2>
-        <div style={{ width: 60, height: 4, background: "#1565C0", margin: "0 auto 48px", borderRadius: 2 }} />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 24 }}>
-          {features.map((f, i) => (
-            <div key={i} className="card" style={{ textAlign: "center", padding: "32px 24px", background: "white", boxShadow: "0 4px 12px rgba(0,0,0,0.05)", borderTop: `4px solid ${i%2===0 ? "#FF9933" : "#138808"}` }}>
-              <div style={{ fontSize: 44, marginBottom: 16 }}>{f.icon}</div>
-              <h3 style={{ color: "#111827", fontSize: 18, fontWeight: 700, marginBottom: 10 }}>{f.title}</h3>
-              <p style={{ color: "#475569", fontSize: 14, lineHeight: 1.6 }}>{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+
 
       {/* CTA */}
       <div style={{ background: "#1565C0", padding: "72px 24px", textAlign: "center", borderTop: "4px solid #FF9933" }}>
