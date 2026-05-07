@@ -1,24 +1,21 @@
 {
-  "name": "admin-project",
+  "name": "votechain",
+  "private": true,
   "version": "1.0.0",
-  "description": "This project is a web application that allows users to vote for their preferred candidates in an election. The project uses MongoDB for database management and has three collections for candidates, elections, and users.",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "frontend": "cd Client && npm run start",
-    "newFrontend": "cd Client && npm install && npm run start",
-    "backend": "cd server && nodemon main",
-    "newBackend": "cd server && npm install && nodemon main"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/prnvbaraiya/admin-project.git"
+  "dependencies": {
+    "@vladmandic/face-api": "^1.7.13",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/prnvbaraiya/admin-project/issues"
-  },
-  "homepage": "https://github.com/prnvbaraiya/admin-project#readme"
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.1.4"
+  }
 }
