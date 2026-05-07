@@ -141,11 +141,11 @@ export default function FaceScanner({ onDetected, onError, mode = "detect" }) {
   }, [phase, detectLoop]);
 
   const phaseColors = {
-    [PHASES.LOADING]: "#6366F1",
-    [PHASES.READY]: "#6366F1",
-    [PHASES.SCANNING]: "#F59E0B",
-    [PHASES.DETECTED]: "#10B981",
-    [PHASES.ERROR]: "#EF4444",
+    [PHASES.LOADING]: "#1565C0",
+    [PHASES.READY]: "#1565C0",
+    [PHASES.SCANNING]: "#FF9933",
+    [PHASES.DETECTED]: "#138808",
+    [PHASES.ERROR]: "#D32F2F",
   };
   const color = phaseColors[phase] || "#6366F1";
 
@@ -154,9 +154,9 @@ export default function FaceScanner({ onDetected, onError, mode = "detect" }) {
       {/* Camera viewport */}
       <div style={{
         position: "relative", width: "100%", maxWidth: 480, aspectRatio: "4/3",
-        borderRadius: 20, overflow: "hidden",
-        background: "#0D1526", border: `2px solid ${color}44`,
-        boxShadow: `0 0 40px ${color}22`,
+        borderRadius: 12, overflow: "hidden",
+        background: "#000000", border: `2px solid ${color}88`,
+        boxShadow: `0 8px 24px rgba(0,0,0,0.15)`,
         transition: "border-color 0.5s, box-shadow 0.5s",
       }}>
         {/* Video */}
@@ -249,11 +249,11 @@ export default function FaceScanner({ onDetected, onError, mode = "detect" }) {
             flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16
           }}>
             <div style={{
-              width: 48, height: 48, border: "3px solid rgba(99,102,241,0.2)",
-              borderTop: "3px solid #6366F1", borderRadius: "50%",
+              width: 48, height: 48, border: "3px solid rgba(21,101,192,0.2)",
+              borderTop: "3px solid #1565C0", borderRadius: "50%",
               animation: "spin 0.8s linear infinite"
             }} />
-            <p style={{ color: "#6366F1", fontSize: 13, fontWeight: 500 }}>Initializing AI…</p>
+            <p style={{ color: "#FFFFFF", fontSize: 13, fontWeight: 600 }}>Initializing Official Face Scan System…</p>
           </div>
         )}
 
@@ -267,12 +267,11 @@ export default function FaceScanner({ onDetected, onError, mode = "detect" }) {
 
         {/* Progress bar */}
         {phase === PHASES.SCANNING && (
-          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 4, background: "rgba(0,0,0,0.5)", zIndex: 15 }}>
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 6, background: "rgba(0,0,0,0.5)", zIndex: 15 }}>
             <div style={{
               height: "100%", width: scanProgress + "%",
-              background: `linear-gradient(90deg, ${color}, #A78BFA)`,
+              background: `linear-gradient(90deg, #138808, #FF9933)`,
               transition: "width 0.2s ease",
-              boxShadow: `0 0 8px ${color}`,
             }} />
           </div>
         )}
@@ -291,14 +290,14 @@ export default function FaceScanner({ onDetected, onError, mode = "detect" }) {
       {/* Progress indicator */}
       {phase === PHASES.SCANNING && (
         <div style={{ width: "100%", maxWidth: 480 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "#6B7280", marginBottom: 6 }}>
-            <span>Face Lock Progress</span>
+          <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12, color: "#374151", marginBottom: 6, fontWeight: 700 }}>
+            <span>Identity Verification Progress</span>
             <span>{scanProgress}%</span>
           </div>
-          <div style={{ height: 6, background: "rgba(255,255,255,0.06)", borderRadius: 3 }}>
+          <div style={{ height: 6, background: "#E2E8F0", borderRadius: 3 }}>
             <div style={{
               height: "100%", width: scanProgress + "%", borderRadius: 3,
-              background: `linear-gradient(90deg, #6366F1, #A78BFA)`,
+              background: `linear-gradient(90deg, #FF9933, #138808)`,
               transition: "width 0.2s",
             }} />
           </div>
