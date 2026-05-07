@@ -1,4 +1,7 @@
 // Frontend-only mode: no backend required
+import bjpLogo from "./bjp_logo.png";
+import congressLogo from "./congress_logo.png";
+
 export const isFaceRecognitionEnable = true;
 
 // Parties
@@ -7,7 +10,7 @@ export const PARTIES = {
     id: "bjp",
     name: "Bharatiya Janata Party",
     shortName: "BJP",
-    logo: "/bjp_logo.png",
+    logo: bjpLogo,
     color: "#FF6B00",
     lightColor: "#FF8C3A",
     symbol: "Lotus",
@@ -20,7 +23,7 @@ export const PARTIES = {
     id: "congress",
     name: "Indian National Congress",
     shortName: "INC",
-    logo: "/congress_logo.png",
+    logo: congressLogo,
     color: "#1565C0",
     lightColor: "#1976D2",
     symbol: "Hand",
